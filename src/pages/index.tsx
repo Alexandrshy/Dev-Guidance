@@ -1,21 +1,26 @@
+import { FC } from 'react';
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
 import { Inter } from 'next/font/google';
+import axios from 'axios';
 import styles from '@/styles/Home.module.css';
 import ProjectList from '@/components/ProjectList/ProjectList';
-import type { Project } from '@/types/project';
+import type { ProjectListProps } from '@/types/project';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const projects: Project[] = [
-  {
-    id: '1',
-    name: 'test',
-    description: 'test2',
-    technologies: [],
-  },
-];
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await axios.get('http://localhost:3000/api/projects');
+  const projects = data.projects;
 
-const HomePage = () => {
+  return {
+    props: {
+      projects,
+    },
+  };
+};
+
+const HomePage: FC<ProjectListProps> = ({ projects }) => {
   return (
     <>
       <Head>
