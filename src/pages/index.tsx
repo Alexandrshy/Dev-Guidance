@@ -10,7 +10,9 @@ import type { ProjectListProps } from '@/types/project';
 const inter = Inter({ subsets: ['latin'] });
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`);
+  const { data } = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
+  );
   const projects = data.projects;
 
   return {
