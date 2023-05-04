@@ -1,0 +1,107 @@
+.button,
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.5rem;
+}
+
+.button {
+  transition: all 0.3s;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.button.primary {
+  background-color: var(--background-button);
+  color: var(--color-button);
+}
+
+@media (hover: hover) {
+  .button.primary:hover {
+    background-color: var(--background-button-hover);
+  }
+}
+
+.button.secondary {
+  background-color: var(--background-button-secondary);
+  color: var(--color-button-secondary);
+}
+
+@media (hover: hover) {
+  .button.secondary:hover {
+    background-color: var(--background-button-secondary-hover);
+  }
+}
+
+.button.transparency {
+  background-color: var(--background-button-transparency);
+  color: var(--color-button-transparency);
+}
+
+@media (hover: hover) {
+  .button.transparency:hover {
+    background-color: var(--background-button-transparency);
+    color: var(--background-button-transparency-hover);
+  }
+}
+
+.button.ghost {
+  background-color: var(--background-button-transparency);
+  color: var(--color-button-ghost);
+  border: 1px solid var(--border-color-button-ghost);
+}
+
+@media (hover: hover) {
+  .button.ghost:hover {
+    color: var(--background-button-transparency-hover);
+    border-color: var(--border-color-button-ghost-hover);
+  }
+}
+
+.button.primary:disabled,
+.button.secondary:disabled,
+.button.transparency:disabled {
+  background-color: var(--background-button-disable);
+  color: var(--color-button-disable);
+}
+
+.button.ghost:disabled {
+  color: var(--color-button-disable);
+  border-color: var(--border-color-button-ghost-disable);
+}
+
+.link {
+  background-color: transparent;
+  text-decoration-line: underline;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--link);
+}
+
+.medium {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.large {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.extra-large {
+  padding: 1rem;
+  border-radius: 12px;
+}
