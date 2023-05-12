@@ -1,0 +1,16 @@
+.logo {
+  background: linear-gradient(
+    92deg,
+    var(--blue3) 0%,
+    var(--turquoise4) 22%,
+    var(--green4) 55%,
+    var(--primary4) 82%,
+    var(--red3) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+  margin: -10px;
+  font-size: 1.9rem;
+  font-weight: bold;
+}

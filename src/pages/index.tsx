@@ -7,6 +7,7 @@ import axios from 'axios';
 import styles from '@/styles/Home.module.css';
 import ProjectList from '@/components/ProjectList/ProjectList';
 import Headline from '@/components/UI/Typography/Headline/Headline';
+import Header from '@/components/Header/Header';
 import type { ProjectListProps } from '@/types/project';
 
 const inter = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
@@ -26,7 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const HomePage: FC<ProjectListProps> = ({ projects }) => {
   return (
-    <>
+    <div className={inter.className}>
       <Head>
         <title>
           Dev-Guidance. Обучение разработке фронтенда с помощью совместных
@@ -39,11 +40,12 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <Header />
+      <main className={styles.main}>
         <Headline level="h3">Frontend Mentor Projects</Headline>
         <ProjectList projects={projects} />
       </main>
-    </>
+    </div>
   );
 };
 
