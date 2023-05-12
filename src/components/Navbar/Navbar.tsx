@@ -9,11 +9,6 @@ const Navbar: FC = () => {
     <nav>
       <ul className={styles.list}>
         <li className={styles.item}>
-          <ButtonLink tag="button" type="button" size="extra-large">
-            Suggest a Project
-          </ButtonLink>
-        </li>
-        <li className={styles.item}>
           <ButtonLink
             tag="button"
             type="button"
