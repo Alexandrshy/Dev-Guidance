@@ -1,16 +1,17 @@
 import { FC } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { Poppins } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import axios from 'axios';
 
 import styles from '@/styles/Home.module.css';
 import ProjectList from '@/components/ProjectList/ProjectList';
-import Headline from '@/components/UI/Typography/Headline/Headline';
+import HeroSection from '@/components/HeroSection/HeroSection';
 import Header from '@/components/Header/Header';
+import Wrapper from '@/components/Wrapper/Wrapper';
 import type { ProjectListProps } from '@/types/project';
 
-const inter = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
+const inter = Roboto({ weight: ['400', '700'], subsets: ['latin'] });
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await axios.get(
@@ -42,8 +43,10 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
       </Head>
       <Header />
       <main className={styles.main}>
-        <Headline level="h3">Frontend Mentor Projects</Headline>
-        <ProjectList projects={projects} />
+        <Wrapper>
+          <HeroSection />
+          <ProjectList projects={projects} />
+        </Wrapper>
       </main>
     </div>
   );

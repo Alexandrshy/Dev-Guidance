@@ -3,7 +3,7 @@
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .thin {
@@ -11,18 +11,18 @@
 }
 
 .h1 {
-  font-size: 6.125rem;
-  line-height: 6.5rem;
+  font-size: 3rem;
+  line-height: 3.25rem;
 }
 
 .h2 {
-  font-size: 4.25rem;
-  line-height: 4.25rem;
+  font-size: 2.425rem;
+  line-height: 3.2rem;
 }
 
 .h3 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
+  font-size: 2.35rem;
+  line-height: 2.75rem;
 }
 
 .h4 {
@@ -38,4 +38,18 @@
 .h6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+  .h1 {
+    font-size: 2.35rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 2.1rem;
+    line-height: 2.25rem;
+  }
 }

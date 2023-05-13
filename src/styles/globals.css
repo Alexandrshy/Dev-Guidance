@@ -83,7 +83,7 @@
   --primary7: #b67c19;
   --primary8: #935e0f;
 
-  --foreground: var(--gray1);
+  --foreground: var(--gray3);
   --background-body: var(--gray22);
 
   --link: var(--blue5);
