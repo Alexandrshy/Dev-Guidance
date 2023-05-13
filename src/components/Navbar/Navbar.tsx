@@ -15,7 +15,7 @@ const Navbar: FC = () => {
             size="extra-large"
             theme="secondary"
           >
-            Join
+            Присоединиться
           </ButtonLink>
         </li>
       </ul>
