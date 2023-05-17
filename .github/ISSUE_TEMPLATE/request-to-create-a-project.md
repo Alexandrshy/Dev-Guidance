@@ -4,7 +4,6 @@ about: Description of the project we would like to do together
 title: ''
 labels: project
 assignees: Alexandrshy
-
 ---
 
 **Describe the project**

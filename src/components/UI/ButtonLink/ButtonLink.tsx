@@ -5,6 +5,8 @@ import styles from './ButtonLink.module.css';
 
 type LinkProps = {
   tag?: 'link';
+  theme?: 'primary' | 'secondary' | 'transparency' | 'ghost';
+  isTarget?: false;
   href: string;
   size?: 'medium' | 'large' | 'extra-large';
   children: ReactNode;
@@ -43,9 +45,12 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
       </button>
     );
   } else {
-    const { href } = props as LinkProps;
+    const { href, theme = 'transparency' } = props as LinkProps;
     return (
-      <Link href={href} className={`${styles.link} ${styles[size]}`}>
+      <Link
+        href={href}
+        className={`${styles.link} ${styles.button} ${styles[size]} ${styles[theme]}`}
+      >
         {children}
       </Link>
     );
