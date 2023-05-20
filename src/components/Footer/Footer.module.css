@@ -1,0 +1,41 @@
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.item {
+  width: 50%;
+}
+
+.item:last-child {
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    text-align: center;
+  }
+
+  .list {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .item:first-child {
+    margin-bottom: .75rem;
+  }
+
+  .item:last-child {
+    text-align: center;
+  }
+}

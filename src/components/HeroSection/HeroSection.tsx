@@ -30,16 +30,6 @@ const HeroSection: FC = () => {
                 Присоединиться к проекту
               </ButtonLink>
             </li>
-            <li className={styles.item}>
-              <ButtonLink
-                tag="link"
-                size="extra-large"
-                theme="secondary"
-                href="https://github.com/Alexandrshy/Dev-Guidance/issues/new?assignees=Alexandrshy&labels=project&projects=&template=request-to-create-a-project.md&title="
-              >
-                Предложить проект
-              </ButtonLink>
-            </li>
           </ul>
         </div>
         <div className={styles.icon}>
