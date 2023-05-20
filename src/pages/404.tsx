@@ -1,30 +1,10 @@
-import { FC } from 'react';
+import Link from 'next/link';
+
+import styles from '@/styles/404.module.css';
+import Wrapper from '@/components/Wrapper/Wrapper';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
-import axios from 'axios';
 
-import styles from '@/styles/Home.module.css';
-import ProjectList from '@/components/ProjectList/ProjectList';
-import HeroSection from '@/components/HeroSection/HeroSection';
-import Header from '@/components/Header/Header';
-import Participate from '@/components/Participate/Participate';
-import Footer from '@/components/Footer/Footer';
-import type { ProjectListProps } from '@/types/project';
-
-export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
-  );
-  const projects = data.projects;
-
-  return {
-    props: {
-      projects,
-    },
-  };
-};
-
-const HomePage: FC<ProjectListProps> = ({ projects }) => {
+export default function Custom404() {
   return (
     <>
       <Head>
@@ -38,15 +18,19 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main className={styles.main}>
-        <HeroSection />
-        <Participate />
-        <ProjectList projects={projects} />
+        <Wrapper>
+          <div className={styles.text}>
+            <h1 className={styles.h1}>404</h1>
+            <h2 className={styles.h2}>
+              Ой, страница, которую вы ищете, не найдена
+            </h2>
+            <Link href="/" className={styles.link}>
+              Вернуться на главную
+            </Link>
+          </div>
+        </Wrapper>
       </main>
-      <Footer />
     </>
   );
-};
-
-export default HomePage;
+}

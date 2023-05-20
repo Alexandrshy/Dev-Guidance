@@ -1,0 +1,54 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.text {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.h1 {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60vw;
+  line-height: 1;
+  color: var(--gray21);
+}
+
+.h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 1.25;
+}
+
+.link {
+  position: relative;
+  font-size: 1.3rem;
+  padding-left: 15px;
+}
+
+.link:before {
+  content: '<';
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+@media (max-width: 768px) {
+  .h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .link {
+    font-size: 1.15rem;
+  }
+}
