@@ -4,7 +4,7 @@
   justify-content: center;
   width: 100%;
   min-height: calc(100vh - 86px);
-  padding: 6rem 0;
+  padding: 4rem 0 8rem;
 }
 
 .text,
@@ -72,5 +72,6 @@
 @media (max-width: 768px) {
   .wrapper {
     min-height: 0;
+    padding: 6rem 0;
   }
 }

@@ -8,7 +8,8 @@ import styles from '@/styles/Home.module.css';
 import ProjectList from '@/components/ProjectList/ProjectList';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Header from '@/components/Header/Header';
-import Wrapper from '@/components/Wrapper/Wrapper';
+import Participate from '@/components/Participate/Participate';
+import Footer from '@/components/Footer/Footer';
 import type { ProjectListProps } from '@/types/project';
 
 const inter = Roboto({ weight: ['400', '700'], subsets: ['latin'] });
@@ -43,11 +44,11 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
       </Head>
       <Header />
       <main className={styles.main}>
-        <Wrapper>
-          <HeroSection />
-          <ProjectList projects={projects} />
-        </Wrapper>
+        <HeroSection />
+        <Participate />
+        <ProjectList projects={projects} />
       </main>
+      <Footer />
     </div>
   );
 };

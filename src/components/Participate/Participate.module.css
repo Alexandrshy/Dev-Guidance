@@ -1,0 +1,43 @@
+.box {
+  width: 100%;
+  background-color: var(--background-section);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 6rem 0;
+}
+
+.text {
+  text-align: center;
+}
+
+.h2 {
+  margin-bottom: 1rem;
+}
+
+.h5 {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 4rem 0;
+  }
+
+  .h2 {
+    margin-bottom: 0.85rem;
+  }
+
+  .h5 {
+    margin-bottom: 1.35rem;
+  }
+}
