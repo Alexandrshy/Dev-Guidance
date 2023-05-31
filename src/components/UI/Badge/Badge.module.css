@@ -1,0 +1,22 @@
+.item {
+  display: inline-block;
+  padding: 0px 8px;
+  border-radius: 24px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.completed {
+  background-color: var(--background-badge-completed);
+  color: var(--color-badge-completed);
+}
+
+.in-progress {
+  background-color: var(--background-badge-in-progress);
+  color: var(--color-badge-in-progress);
+}
+
+.ready {
+  background-color: var(--background-badge-ready-for-dev);
+  color: var(--color-badge-ready-for-dev);
+}

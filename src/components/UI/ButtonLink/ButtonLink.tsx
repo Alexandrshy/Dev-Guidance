@@ -9,6 +9,7 @@ type LinkProps = {
   isTarget?: false;
   href: string;
   size?: 'medium' | 'large' | 'extra-large';
+  className?: string;
   children: ReactNode;
 };
 
@@ -19,13 +20,14 @@ type ButtonProps = {
   onClick?: () => void;
   size?: 'medium' | 'large' | 'extra-large';
   disabled?: boolean;
+  className?: string;
   children: ReactNode;
 };
 
 type ButtonLinkProps = LinkProps | ButtonProps;
 
 const ButtonLink: FC<ButtonLinkProps> = (props) => {
-  const { children, size = 'large' } = props;
+  const { children, size = 'large', className = '' } = props;
 
   if (props.tag === 'button') {
     const {
@@ -38,7 +40,7 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
       <button
         type={type}
         onClick={onClick}
-        className={`${styles.button} ${styles[size]} ${styles[theme]}`}
+        className={`${styles.button} ${styles[size]} ${styles[theme]} ${className}`}
         disabled={disabled}
       >
         {children}
@@ -49,7 +51,7 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
     return (
       <Link
         href={href}
-        className={`${styles.link} ${styles.button} ${styles[size]} ${styles[theme]}`}
+        className={`${styles.link} ${styles.button} ${styles[size]} ${styles[theme]} ${className}`}
       >
         {children}
       </Link>

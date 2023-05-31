@@ -1,6 +1,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --border-radius-increased: 16px;
 
   --white: #fff;
   --gray1: #fbfcff;
@@ -86,12 +87,21 @@
   --foreground: var(--gray3);
   --background-body: var(--gray22);
   --background-section: var(--gray24);
+  --background-project: var(--gray24);
   --border-color: var(--gray20);
+
+  --background-badge-ready-for-dev: var(--blue2);
+  --color-badge-ready-for-dev: var(--blue6);
+  --background-badge-in-progress: var(--green2);
+  --color-badge-in-progress: var(--green6);
+  --background-badge-completed: var(--primary1);
+  --color-badge-completed: var(--primary5);
 
   --link: var(--blue5);
 
   --color-button: var(--black);
   --color-button-disable: var(--gray18);
+  --color-additionally: var(--gray9);
   --background-button: var(--primary5);
   --background-button-hover: var(--primary6);
   --background-button-disable: var(--gray23);
