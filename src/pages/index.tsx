@@ -41,8 +41,8 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
       <Header />
       <main className={styles.main}>
         <HeroSection />
-        <Participate />
         <ProjectList projects={projects} />
+        <Participate />
       </main>
       <Footer />
     </>

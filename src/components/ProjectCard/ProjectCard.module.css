@@ -1,0 +1,49 @@
+.item {
+  width: 50%;
+  flex: 0 0 auto;
+  padding: 1rem;
+}
+
+.box {
+  height: 100%;
+  padding: 2.75rem 3.25rem;
+  background-color: var(--background-project);
+  border-radius: var(--border-radius-increased);
+}
+
+.title,
+.info {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  width: 100%;
+}
+
+.tags {
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  margin-bottom: 0.75rem;
+}
+
+.additionally {
+  color: var(--color-additionally);
+}
+
+@media (max-width: 992px) {
+  .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding: 0.5rem;
+  }
+
+  .box {
+    padding: 1.75rem 2.25rem;
+  }
+}

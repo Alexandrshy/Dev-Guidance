@@ -1,8 +1,9 @@
 export type Project = {
   id: string;
   name: string;
-  description: string;
   technologies: string[];
+  content: string;
+  type: 'completed' | 'in-progress' | 'ready';
 };
 
 export type ProjectCardProps = {

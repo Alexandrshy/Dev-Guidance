@@ -1,0 +1,12 @@
+.box {
+  padding: 2rem 0 6rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0 -1rem;
+  padding: 0;
+}

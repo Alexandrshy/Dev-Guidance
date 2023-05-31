@@ -8,9 +8,9 @@ import ButtonLink from '@/components/UI/ButtonLink/ButtonLink';
 
 const Participate: FC = () => {
   return (
-    <div className={styles.box}>
+    <section className={styles.box}>
       <Wrapper>
-        <section className={styles.wrapper}>
+        <div className={styles.wrapper}>
           <div className={styles.text}>
             <div className={styles.h2}>
               <Headline level="h2">Предложить свой проект!</Headline>
@@ -31,9 +31,9 @@ const Participate: FC = () => {
               </ButtonLink>
             </div>
           </div>
-        </section>
+        </div>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 
