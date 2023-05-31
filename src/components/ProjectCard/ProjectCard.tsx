@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import Headline from '@/components/UI/Typography/Headline/Headline';
 import type { ProjectCardProps } from '@/types/project';
-
-import styles from './ProjectCard.module.css';
+import Headline from '@/components/UI/Typography/Headline/Headline';
 import ButtonLink from '@/components/UI/ButtonLink/ButtonLink';
 import Badge from '@/components/UI/Badge/Badge';
+
+import styles from './ProjectCard.module.css';
 
 const BADGE = {
   completed: 'Completed',
@@ -30,7 +30,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               {project.technologies.join(', ')}
             </span>
           </p>
-          <div dangerouslySetInnerHTML={{ __html: project.content }} />
+          <div
+            className={styles.desc}
+            dangerouslySetInnerHTML={{ __html: project.content }}
+          />
         </div>
         <ButtonLink
           tag="button"
