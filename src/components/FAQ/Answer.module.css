@@ -1,0 +1,26 @@
+.item {
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.titleBtn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ans {
+  margin-top: 0.85rem;
+  color: var(--gray6);
+}
