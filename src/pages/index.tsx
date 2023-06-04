@@ -9,6 +9,7 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import Header from '@/components/Header/Header';
 import Participate from '@/components/Participate/Participate';
 import Footer from '@/components/Footer/Footer';
+import FAQ from '@/components/FAQ/Faq';
 import type { ProjectListProps } from '@/types/project';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -43,6 +44,7 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
         <HeroSection />
         <ProjectList projects={projects} />
         <Participate />
+        <FAQ />
       </main>
       <Footer />
     </>
