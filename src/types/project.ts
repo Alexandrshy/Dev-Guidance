@@ -4,6 +4,7 @@ export type Project = {
   technologies: string[];
   content: string;
   type: 'completed' | 'in-progress' | 'ready';
+  link: string;
 };
 
 export type ProjectCardProps = {

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
@@ -26,6 +26,10 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const HomePage: FC<ProjectListProps> = ({ projects }) => {
+  const projectSectionRef = useRef<HTMLUListElement | null>(null);
+  const onClickHandler = () =>
+    projectSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+
   return (
     <>
       <Head>
@@ -41,8 +45,8 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
       </Head>
       <Header />
       <main className={styles.main}>
-        <HeroSection />
-        <ProjectList projects={projects} />
+        <HeroSection onClick={onClickHandler} />
+        <ProjectList ref={projectSectionRef} projects={projects} />
         <Participate />
         <FAQ />
       </main>

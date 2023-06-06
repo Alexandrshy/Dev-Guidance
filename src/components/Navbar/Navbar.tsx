@@ -10,12 +10,12 @@ const Navbar: FC = () => {
       <ul className={styles.list}>
         <li className={styles.item}>
           <ButtonLink
-            tag="button"
-            type="button"
+            tag="link"
             size="extra-large"
             theme="secondary"
+            href={'mailto:alexandrshy@gmail.com'}
           >
-            Присоединиться
+            Обсудить
           </ButtonLink>
         </li>
       </ul>

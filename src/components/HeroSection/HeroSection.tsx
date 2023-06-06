@@ -7,7 +7,11 @@ import Wrapper from '@/components/Wrapper/Wrapper';
 
 import styles from './HeroSection.module.css';
 
-const HeroSection: FC = () => {
+type HeroSectionType = {
+  onClick: () => void;
+};
+
+const HeroSection: FC<HeroSectionType> = ({ onClick }) => {
   return (
     <Wrapper>
       <section className={styles.wrapper}>
@@ -26,8 +30,13 @@ const HeroSection: FC = () => {
           </div>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <ButtonLink tag="button" type="button" size="extra-large">
-                Присоединиться к проекту
+              <ButtonLink
+                tag="button"
+                type="button"
+                size="extra-large"
+                onClick={onClick}
+              >
+                Выбрать проект
               </ButtonLink>
             </li>
           </ul>
