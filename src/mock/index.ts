@@ -9,4 +9,4 @@ export const PROJECT_MOCK: Project = {
   link: '/',
 };
 
-export const PROJECTS_MOCK: ProjectListProps = { projects: [PROJECT_MOCK] };
+export const PROJECTS_MOCK: Project[] = [PROJECT_MOCK];
