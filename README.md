@@ -1,38 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## DevGuid
 
-## Getting Started
+A platform for learning frontend development by participating in real projects. Join small groups of up to 5 people and work on projects together. Get hands-on experience, improve your skills, and collaborate with others in a group development or pair programming format.
 
-First, run the development server:
+### Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Prerequisites
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+What things you need to install the software and how to install them. This usually includes Node.js and npm.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/projects.ts`.
+#### Installing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A step-by-step series of examples that tell you how to get a development environment running:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository: `git clone https://github.com/Alexandrshy/Dev-Guidance.git`
+2. Navigate to the project directory: `cd Dev-Guidance`
+3. Install dependencies: `npm install`
+4. Run the development server: `npm run dev`
+   Now you should be able to open the project at http://localhost:3000.
 
-## Learn More
+### Contributing
 
-To learn more about Next.js, take a look at the following resources:
+#### Proposing a Change
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository and create a new branch: `git checkout -b my-branch-name`.
+2. Make your change, add tests, and ensure the tests pass.
+3. Commit your changes: `git commit -am 'Add some feature'`.
+4. Push to the branch: `git push origin my-branch-name`.
+5. Submit a Pull Request through GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Creating a New Project
 
-## Deploy on Vercel
+1. Create a new markdown file in the `_projects` directory.
+2. Write the description of your project using Markdown.
+3. Commit and push your changes.
+4. Create a Pull Request.
+   For a more detailed guide, please refer to the GitHub Pull Request documentation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running the Tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Explain how to run the automated tests for this system:
+
+`npm run test`
+
+- Built With
+- Next.js
+- TypeScript
+- Jest
+- Other technologies...
+
+### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Acknowledgments
+
+Thank you to all contributors and anyone who has helped to improve this project.

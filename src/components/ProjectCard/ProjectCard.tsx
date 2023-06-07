@@ -36,10 +36,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           />
         </div>
         <ButtonLink
-          tag="button"
-          type="button"
+          tag="link"
           theme="secondary"
           className={styles.btn}
+          href={project.link}
         >
           Присеоединиться
         </ButtonLink>

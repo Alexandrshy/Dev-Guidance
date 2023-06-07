@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 import styles from '@/styles/404.module.css';
 import Wrapper from '@/components/Wrapper/Wrapper';
-import Head from 'next/head';
 
 export default function Custom404() {
   return (

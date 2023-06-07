@@ -12,7 +12,7 @@
 }
 
 .title,
-.info {
+.info:not(:last-child) {
   margin-bottom: 2rem;
 }
 
