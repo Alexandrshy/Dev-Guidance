@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import Wrapper from '@/components/Wrapper/Wrapper';
 import Headline from '@/components/UI/Typography/Headline/Headline';
+import ButtonLink from '@/components/UI/ButtonLink/ButtonLink';
 
 import styles from './Participate.module.css';
-import ButtonLink from '@/components/UI/ButtonLink/ButtonLink';
 
 const Participate: FC = () => {
   return (
