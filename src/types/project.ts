@@ -3,8 +3,9 @@ export type Project = {
   name: string;
   technologies: string[];
   content: string;
-  type: 'completed' | 'in-progress' | 'ready';
+  type: 'completed' | 'in-progress' | 'to-do';
   link: string;
+  lang: 'ru' | 'en';
 };
 
 export type ProjectCardProps = {

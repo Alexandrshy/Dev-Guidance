@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 
 import type { ProjectCardProps } from '@/types/project';
 import Headline from '@/components/UI/Typography/Headline/Headline';
@@ -10,10 +11,12 @@ import styles from './ProjectCard.module.css';
 const BADGE = {
   completed: 'Completed',
   'in-progress': 'In Progress',
-  ready: 'Ready',
+  'to-do': 'To Do',
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
+  const t = useTranslations();
+
   return (
     <li className={styles.item}>
       <div className={styles.box}>
@@ -21,11 +24,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           <Headline level="h5">{project.name}</Headline>
         </div>
         <div className={styles.info}>
-          <div className={styles.badge}>
-            <Badge type={project.type}>{BADGE[project.type]}</Badge>
-          </div>
+          {project.type && (
+            <div className={styles.badge}>
+              <Badge type={project.type}>{BADGE[project.type]}</Badge>
+            </div>
+          )}
           <p className={styles.tags}>
-            Technologies:{' '}
+            {t('project_card_technologies')}:{' '}
             <span className={styles.additionally}>
               {project.technologies.join(', ')}
             </span>
@@ -41,7 +46,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           className={styles.btn}
           href={project.link}
         >
-          Присеоединиться
+          {t('project_card_btn')}
         </ButtonLink>
       </div>
     </li>

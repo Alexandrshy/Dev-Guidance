@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react';
 import styles from './Badge.module.css';
 
 type BadgeType = {
-  type: 'completed' | 'in-progress' | 'ready';
+  type: 'completed' | 'in-progress' | 'to-do';
   children: ReactNode;
 };
 

@@ -1,5 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-
+import { render, screen, fireEvent } from '../../../../test-utils';
 import HeroSection from '@/components/HeroSection/HeroSection';
 
 describe('<HeroSection />', () => {

@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import Wrapper from '@/components/Wrapper/Wrapper';
 
 import styles from './Footer.module.css';
 
 const Footer: FC = () => {
+  const t = useTranslations();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,9 +16,9 @@ const Footer: FC = () => {
         <ul className={styles.list}>
           <li className={styles.item}>
             <span>
-              Хотите принять участие в проекте или нашли ошибку? <br />
+              {t('footer_text')} <br />
               <Link href="https://github.com/Alexandrshy/Dev-Guidance">
-                GitHub репозиторий проекта
+                {t('footer_link')}
               </Link>
             </span>
           </li>
