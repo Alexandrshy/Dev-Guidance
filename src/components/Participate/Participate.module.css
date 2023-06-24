@@ -12,6 +12,7 @@
 }
 
 .text {
+  width: 100%;
   text-align: center;
 }
 
@@ -23,7 +24,7 @@
   margin-bottom: 2rem;
 }
 
-.btn {
+.elements {
   display: flex;
   justify-content: center;
 }
@@ -39,5 +40,10 @@
 
   .h5 {
     margin-bottom: 1.35rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 450px;
   }
 }

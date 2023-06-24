@@ -16,7 +16,7 @@
   color: var(--color-badge-in-progress);
 }
 
-.ready {
-  background-color: var(--background-badge-ready-for-dev);
-  color: var(--color-badge-ready-for-dev);
+.to-do {
+  background-color: var(--background-badge-to-do-for-dev);
+  color: var(--color-badge-to-do-for-dev);
 }

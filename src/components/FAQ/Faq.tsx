@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 
 import Answer from '@/components/FAQ/Answer';
 import Headline from '@/components/UI/Typography/Headline/Headline';
@@ -25,17 +26,23 @@ const LIST = [
 ];
 
 const FAQ: FC = () => {
+  const t = useTranslations();
+
   return (
     <section className={styles.box}>
       <Wrapper>
         <div className={styles.wrapper}>
           <div className={styles.title}>
-            <Headline level="h2">Как это работает?</Headline>
+            <Headline level="h2">{t('faq_title')}</Headline>
           </div>
           <div className={styles.question}>
             <ul className={styles.list}>
-              {LIST.map(({ id, title, ans }) => (
-                <Answer key={id} title={title} ans={ans} />
+              {LIST.map(({ title, ans }, index) => (
+                <Answer
+                  key={title.split('').join('_')}
+                  title={t(`faq_list_${index + 1}_title`)}
+                  ans={t(`faq_list_${index + 1}_ans`)}
+                />
               ))}
             </ul>
           </div>

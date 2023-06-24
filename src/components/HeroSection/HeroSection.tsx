@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 
 import ButtonLink from '@/components/UI/ButtonLink/ButtonLink';
 import Headline from '@/components/UI/Typography/Headline/Headline';
@@ -12,20 +13,18 @@ type HeroSectionType = {
 };
 
 const HeroSection: FC<HeroSectionType> = ({ onClick }) => {
+  const t = useTranslations();
+
   return (
     <Wrapper>
       <section className={styles.wrapper}>
         <div className={styles.text}>
           <div className={styles.h1}>
-            <Headline level="h1">
-              Присоединяйтесь, учитесь и создавайте вместе!
-            </Headline>
+            <Headline level="h1">{t('hero_section_title')}</Headline>
           </div>
           <div className={styles.h2}>
             <Headline level="h6" style="thin">
-              Совместное изучение Frontend-разработки с помощью реальных
-              проектов. Присоединяйтесь к существующему проекту или предложите
-              свой собственный!
+              {t('hero_section_text')}
             </Headline>
           </div>
           <ul className={styles.list}>
@@ -36,7 +35,7 @@ const HeroSection: FC<HeroSectionType> = ({ onClick }) => {
                 size="extra-large"
                 onClick={onClick}
               >
-                Выбрать проект
+                {t('hero_section_btn')}
               </ButtonLink>
             </li>
           </ul>

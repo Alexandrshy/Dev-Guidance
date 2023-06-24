@@ -11,6 +11,7 @@ type LinkProps = {
   size?: 'medium' | 'large' | 'extra-large';
   className?: string;
   children: ReactNode;
+  locale?: string;
 };
 
 type ButtonProps = {
@@ -47,11 +48,12 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
       </button>
     );
   } else {
-    const { href, theme = 'transparency' } = props as LinkProps;
+    const { href, theme = 'transparency', locale } = props as LinkProps;
     return (
       <Link
         href={href}
         className={`${styles.link} ${styles.button} ${styles[size]} ${styles[theme]} ${className}`}
+        locale={locale}
       >
         {children}
       </Link>

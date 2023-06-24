@@ -1,5 +1,4 @@
-import { render, screen } from '@testing-library/react';
-
+import { render, screen } from '../../../../test-utils';
 import { PROJECTS_MOCK } from '../../../mock';
 import ProjectList from '@/components/ProjectList/ProjectList';
 

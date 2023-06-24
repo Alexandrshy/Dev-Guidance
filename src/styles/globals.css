@@ -90,8 +90,8 @@
   --background-project: var(--gray24);
   --border-color: var(--gray20);
 
-  --background-badge-ready-for-dev: var(--blue2);
-  --color-badge-ready-for-dev: var(--blue6);
+  --background-badge-to-do-for-dev: var(--blue2);
+  --color-badge-to-do-for-dev: var(--blue6);
   --background-badge-in-progress: var(--green2);
   --color-badge-in-progress: var(--green6);
   --background-badge-completed: var(--primary1);
