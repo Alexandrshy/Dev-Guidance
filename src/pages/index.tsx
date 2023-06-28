@@ -1,6 +1,6 @@
 import { FC, useRef } from 'react';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import { useTranslations } from 'next-intl';
 
@@ -13,7 +13,7 @@ import Footer from '@/components/Footer/Footer';
 import FAQ from '@/components/FAQ/Faq';
 import type { ProjectListProps } from '@/types/project';
 
-export const getServerSideProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const { data } = await axios.get<ProjectListProps>(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
   );
