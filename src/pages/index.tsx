@@ -13,7 +13,7 @@ import Footer from '@/components/Footer/Footer';
 import FAQ from '@/components/FAQ/Faq';
 import type { ProjectListProps } from '@/types/project';
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetStaticProps = async (context) => {
   const { data } = await axios.get<ProjectListProps>(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
   );
