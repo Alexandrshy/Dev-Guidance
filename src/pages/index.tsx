@@ -13,24 +13,6 @@ import Footer from '@/components/Footer/Footer';
 import FAQ from '@/components/FAQ/Faq';
 import type { ProjectListProps } from '@/types/project';
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { data } = await axios.get<ProjectListProps>(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
-  );
-
-  const messages = (await import(`../../public/locales/${context.locale}.json`))
-    .default;
-
-  const projects = data.projects.filter(({ lang }) => lang === context.locale);
-
-  return {
-    props: {
-      projects,
-      messages,
-    },
-  };
-};
-
 const HomePage: FC<ProjectListProps> = ({ projects }) => {
   const t = useTranslations();
   const projectSectionRef = useRef<HTMLUListElement | null>(null);
@@ -55,6 +37,24 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetServerSideProps = async (context) => {
+  const { data } = await axios.get<ProjectListProps>(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`
+  );
+
+  const messages = (await import(`../../public/locales/${context.locale}.json`))
+    .default;
+
+  const projects = data.projects.filter(({ lang }) => lang === context.locale);
+
+  return {
+    props: {
+      projects,
+      messages,
+    },
+  };
 };
 
 export default HomePage;
