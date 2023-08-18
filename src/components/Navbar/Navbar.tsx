@@ -24,6 +24,9 @@ const Navbar: FC = () => {
           >
             <span className={styles.langWrap}>
               <span className={styles.langText}>{t('lang_btn_text')}</span>
+              <span className={styles.langShortText}>
+                {t('lang_btn_short_text')}
+              </span>
             </span>
           </ButtonLink>
         </li>
