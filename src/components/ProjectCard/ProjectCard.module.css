@@ -32,6 +32,21 @@
   color: var(--color-additionally);
 }
 
+.desc ul {
+  padding-left: 1rem;
+}
+
+.desc h5 {
+  margin: 1.75rem 0 0.7rem;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+}
+
+.desc h6 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
 @media (max-width: 992px) {
   .item {
     width: 100%;

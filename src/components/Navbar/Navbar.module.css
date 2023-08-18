@@ -15,16 +15,7 @@
   align-items: center;
 }
 
-.langFlag {
-  font-size: 1.2rem;
-  margin-right: 8px;
-}
-
 @media (max-width: 768px) {
-  .langFlag {
-    margin-right: 0;
-  }
-
   .langText {
     display: none;
   }
