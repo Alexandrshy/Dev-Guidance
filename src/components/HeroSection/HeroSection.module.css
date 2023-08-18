@@ -14,11 +14,11 @@
 }
 
 .text {
-  max-width: 60%;
+  max-width: 45%;
 }
 
 .icon {
-  max-width: 40%;
+  max-width: 55%;
 }
 
 .h1 {
@@ -41,14 +41,6 @@
 }
 
 @media (max-width: 1200px) {
-  .text {
-    max-width: 57%;
-  }
-
-  .icon {
-    max-width: 43%;
-  }
-
   .h1 {
     margin-bottom: 1.5rem;
   }

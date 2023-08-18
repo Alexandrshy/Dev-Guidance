@@ -23,7 +23,6 @@ const Navbar: FC = () => {
             locale={otherLocale}
           >
             <span className={styles.langWrap}>
-              <span className={styles.langFlag}>{t('lang_btn_flag')}</span>
               <span className={styles.langText}>{t('lang_btn_text')}</span>
             </span>
           </ButtonLink>
