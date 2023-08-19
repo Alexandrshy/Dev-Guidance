@@ -26,6 +26,7 @@ const HomePage: FC<ProjectListProps> = ({ projects }) => {
         <meta name="description" content={t('meta_content')} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="me" href="https://mastodon.social/@ctietze" />
       </Head>
       <Header />
       <main className={styles.main}>
